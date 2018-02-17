@@ -1,0 +1,28 @@
+package Lesson3_4_Loops;
+
+import java.util.Scanner;
+
+public class EvensRangePrinter {
+
+	public static void main(String[] args) {
+		// Input
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter first value: ");
+		int first = scan.nextInt();
+		System.out.print("Enter last value: ");
+		int last = scan.nextInt();
+		
+		//BL
+		if(!(first > last))
+		printEvensRange(first, last);
+	}
+	
+	public static void printEvensRange(int first, int last){
+		if(first % 2 != 0){
+			first += 1;
+		}
+		for(int numbPrint = first; numbPrint <= last; numbPrint +=2){
+			System.out.print(numbPrint + " ");
+		}
+	}
+}
